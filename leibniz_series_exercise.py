@@ -1,7 +1,6 @@
-import random
-num_points = 100000
-in_or_out = []
-for i in range(num_points):
-  in_or_out.append((((random.random()-0.5)**2) + (random.random()-0.5)**2)**0.5 <= 0.5)
-  tozaa = sum(in_or_out)/num_points*4
-print(tozaa)
+def approximate_pi(n_terms):
+  pi_calculate = 0
+  for k in range(n_terms):
+    pi_calculate +=(-1)**k / (2*k+1)
+  return 4*pi_calculate
+print (approximate_pi(1000))
